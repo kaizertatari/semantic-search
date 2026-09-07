@@ -1,0 +1,3 @@
+The bug is almost never in the part you're staring at. It's in the part you skipped because you were certain about it. Certainty is the thing that hides code from you.
+
+The habit that actually helps: before forming a theory, read the failing path top to bottom out loud, including the boring lines. Half the time the answer surfaces before I've finished reading, and I never needed the theory at all.

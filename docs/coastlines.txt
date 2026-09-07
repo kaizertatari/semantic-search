@@ -1,0 +1,3 @@
+Britain's coastline has no single length. Measure it with a 200km ruler and you get one number; measure with a 50km ruler and you get a substantially larger one, because the shorter ruler follows inlets the long one steps over. Keep shrinking the ruler and the total keeps climbing.
+
+The trap is thinking this is a measurement problem. It isn't. There is no true value being approximated. "Length of coastline" only means something once you also state the scale, and people forget to state the scale constantly, in contexts far away from geography.
