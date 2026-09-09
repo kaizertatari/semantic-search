@@ -1,0 +1,9 @@
+This is a test document for an empty-chunk guard.
+
+
+
+Paragraph B.
+
+           
+
+Paragraph C.

@@ -12,9 +12,13 @@ for p in Path("docs").glob("*.txt"):
     file = p.name
 
     for para in content.split("\n\n"):
+        para = para.strip()
+        if not para:
+            continue
         file_data.append({"text":para,"filename":file})
 
-print(file_data[1])
+for chunks in file_data:
+    print(repr(chunks["text"]))
+    print(chunks["filename"])
 print(len(file_data))
-print(len(file_data[1]))
 
