@@ -1,7 +1,6 @@
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 import numpy as np
-import pandas as pd
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
@@ -39,7 +38,7 @@ for data in file_data[:3]:
     print(f"Score: {data["score"]} Text: {data["text"]} Filename: {data["filename"]}")
 
 """
-print(file_data[0].keys())
+print(file_data.keys())
 print(file_data[0].get("vector").shape)
 print(file_data[0].get("score"))
 print(np.array_equal(file_data[0]["vector"], file_data[5]["vector"]))
