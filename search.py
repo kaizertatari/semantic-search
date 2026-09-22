@@ -10,7 +10,7 @@ def similarity(a,b):
     answer =np.dot(a,b) / (np.linalg.norm(a) * np.linalg.norm(b))
     return answer
 
-for p in Path("docs").glob("*.txt"):
+for p in (Path(__file__).parent/"docs").glob("*.txt"):
     content = p.read_text(encoding = "utf-8")
     file = p.name
 
@@ -36,6 +36,7 @@ file_data = sorted(file_data, key=lambda data: data["score"], reverse = True)
 
 for data in file_data[:3]:
     print(f"Score: {data["score"]} Text: {data["text"]} Filename: {data["filename"]}")
+
 
 """
 print(file_data.keys())
