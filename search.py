@@ -26,21 +26,12 @@ vectors = model.encode(chunks)
 for item, value in zip(file_data, vectors):
     item.update({"vector":value})
 
-query = "how do you find a bug"
-vquery = model.encode(query)
-
-for record in file_data:
-    record.update({"score":similarity(record["vector"],vquery)})
-
-file_data = sorted(file_data, key=lambda data: data["score"], reverse = True)
-
-for data in file_data[:3]:
-    print(f"Score: {data["score"]} Text: {data["text"]} Filename: {data["filename"]}")
-
-
-"""
-print(file_data.keys())
-print(file_data[0].get("vector").shape)
-print(file_data[0].get("score"))
-print(np.array_equal(file_data[0]["vector"], file_data[5]["vector"]))
-"""
+def search(question):
+    vquestion = model.encode(question)
+    for record in file_data:       
+        record.update({"score":similarity(record["vector"],vquestion)})
+    top_chunks = sorted(file_data, key=lambda data: data["score"], reverse = True)[:3]
+    datalist =[]
+    for data in top_chunks:
+        datalist.append(f"Score: {data["score"]} Text: {data["text"]} Filename: {data["filename"]}")
+    return datalist
