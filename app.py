@@ -1,10 +1,7 @@
 from rag import get_answer
+import streamlit as st
 
-def get_input():
-    answer = input("Enter the prompt: ")
-    while not answer.strip():
-        print("Prompt must not be blank.")
-        answer = input("Enter the prompt: ")
-    return answer
+question = st.text_input("Enter a prompt?")
 
-print(get_answer(get_input()))
+if question.strip():
+    st.write(get_answer(question))
