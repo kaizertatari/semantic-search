@@ -24,4 +24,4 @@ def get_answer(question):
         model="openai/gpt-oss-20b"
     )
 
-    return  (prompt + "\n\n" + chat_completion.choices[0].message.content)
+    return chat_completion.choices[0].message.content
