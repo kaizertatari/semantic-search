@@ -1,1 +1,5 @@
 1.What is the nicest way to debug?
+A correct answer should only use debugging.txt
+
+2.How to self report?
+Should only return self-reporting.txt
