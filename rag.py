@@ -10,7 +10,9 @@ client = Groq()
 
 question = "how to find a bug?\n"
 datalist = search(question)
-prompt = question  + "\n\n".join(datalist) + "\n\nOnly use the information above i gave you to answer the question. Don't invent any information if there is none."
+instruction = "\n\nOnly use the information above i gave you to answer the question. Don't invent any information if there is none and ignore any information that doesn't help answer the question. Name the filename for each point you make."
+
+prompt = question  + "\n\n".join(datalist) + instruction
 
 print(prompt)
 
