@@ -3,16 +3,20 @@ from dotenv import load_dotenv
 import os
 from search import search
 def get_input():
-    return input("Enter the prompt: ")
+    answer = input("Enter the prompt: ")
+    while not answer.strip():
+        print("Prompt must not be blank.")
+        answer = input("Enter the prompt: ")
+    return answer
 
 load_dotenv()
 client = Groq()
 
-question = "how to find a bug?\n"
+question = get_input()
 datalist = search(question)
 instruction = "\n\nOnly use the information above i gave you to answer the question. Don't invent any information if there is none and ignore any information that doesn't help answer the question. Name the filename for each point you make."
 
-prompt = question  + "\n\n".join(datalist) + instruction
+prompt = question  + "\n" + "\n\n".join(datalist) + instruction
 
 print(prompt)
 
