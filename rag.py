@@ -8,9 +8,9 @@ def get_input():
 load_dotenv()
 client = Groq()
 
-question = "What's a good way to cook rice?\n"
+question = "how to find a bug?\n"
 datalist = search(question)
-prompt = question  + "\n\n".join(datalist) + "\nOnly use the information above i gave you to answer the question. Don't invent any information if there is none."
+prompt = question  + "\n\n".join(datalist) + "\n\nOnly use the information above i gave you to answer the question. Don't invent any information if there is none."
 
 print(prompt)
 
