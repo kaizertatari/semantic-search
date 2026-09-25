@@ -3,7 +3,7 @@ This program gets input from the user and returns an answer based on the embeds 
 
 # URL
 https://kaizertatari-semantic-search-app-uh24wa.streamlit.app/
-
+ add: ![App screenshot](Screenshot.png)
 # Limitation
 The top-3 is chosen by rank rather than relevance.
 EXAMPLES
