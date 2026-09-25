@@ -20,4 +20,8 @@ The corpus is a generated sample text.
 You need a GROQ_API_KEY stored in secrets on the streamlit app.
 
 # How to run it?
- → clone → create venv → pip install -r requirements.txt → streamlit run app.py
+ 1. clone the repo.
+ 2. Create and activate a venv. 
+ 3. pip install -r requirements.txt 
+ 4. create .env with the key that should go in the secrets section in the streamlit app.
+ 5.  streamlit run app.py
