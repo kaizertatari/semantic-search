@@ -1,6 +1,5 @@
 from groq import Groq
 from dotenv import load_dotenv
-import os
 from search import search
 
 load_dotenv()
