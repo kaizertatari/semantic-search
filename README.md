@@ -8,13 +8,16 @@ https://kaizertatari-semantic-search-app-uh24wa.streamlit.app/
 The top-3 is chosen by rank rather than relevance.
 EXAMPLES
 1.What is the nicest way to debug?
-A correct answer should only use debugging.txt
+A correct answer should only use debugging.txt. The model turned self-report.txt into a debugging device.
 
 2.How to self report?
-Should only return self-reporting.txt but debuggin.txt is returned bbecause it is in the top 3.
+Should only return self-report.txt but debugging.txt is returned because it is in the top 3.
 
 # Note
 The corpus is a generated sample text.
 
+# PREREQUISITE
+You need a GROQ_API_KEY stored in secrets on the streamlit app.
+
 # How to run it?
- → clone → create venv → pip install -r requirements.txt → python search.py
+ → clone → create venv → pip install -r requirements.txt → streamlit run app.py
