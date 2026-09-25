@@ -23,5 +23,7 @@ You need a GROQ_API_KEY stored in secrets on the streamlit app.
  1. clone the repo.
  2. Create and activate a venv. 
  3. pip install -r requirements.txt 
- 4. create .env with the key that should go in the secrets section in the streamlit app.
+ 4. create .env with the key (GROQ_API_KEY=your_key_here) 
+ PC: load_dotenv() reads the local .env file.
+ APP:Store the key in streamlit cloud's secret.
  5.  streamlit run app.py
