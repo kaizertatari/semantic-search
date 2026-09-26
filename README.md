@@ -3,7 +3,7 @@ This program gets input from the user and returns an answer based on the embeds 
 
 # URL
 https://kaizertatari-semantic-search-app-uh24wa.streamlit.app/
- add: ![App screenshot](Screenshot.png)
+![App screenshot](Screenshot.png)
 # Limitation
 The top-3 is chosen by rank rather than relevance.
 EXAMPLES
@@ -18,6 +18,7 @@ The corpus is a generated sample text.
 
 # PREREQUISITE
 You need a GROQ_API_KEY stored in secrets on the streamlit app.
+URL: https://console.groq.com/home
 
 # How to run it?
  1. clone the repo.
